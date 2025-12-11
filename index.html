@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Contact Us</h1>
+      <form class="form form__wrapper" action="#" method="post">
+        <!-- Names group -->
+        <div class="form__names">
+          <div class="form__name">
+            <label class="form__label" for="first-name">
+              First Name <span class="form__required name-important">*</span>
+            </label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              required
+              placeholder="First Name"
+              class="form__input"
+              aria-describedby="first-name-error"
+            />
+            <span id="first-name-error" class="form__error" aria-live="polite">
+              This field is required
+            </span>
+          </div>
+          <div class="form__name">
+            <label class="form__label" for="last-name">
+              Last Name <span class="form__required name-important">*</span>
+            </label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              required
+              placeholder="Last Name"
+              class="form__input"
+              aria-describedby="last-name-error"
+            />
+            <span id="last-name-error" class="form__error" aria-live="polite">
+              This field is required
+            </span>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="form__email">
+          <label class="form__label" for="email">
+            Email Address <span class="form__required name-important">*</span>
+          </label>
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="name@example.com"
+            aria-describedby="email-error"
+          />
+          <span id="email-error" class="form__error" aria-live="polite">
+            Please enter a valid email address
+          </span>
+        </div>
+        <!-- Radio group -->
+        <fieldset class="form__radio">
+          <legend class="form__legend">
+            Query Type <span class="form__required name-important">*</span>
+          </legend>
+          <div class="form__query">
+            <input
+              class="form__radio-input"
+              type="radio"
+              id="query-general"
+              name="query-type"
+              value="general"
+              required
+            />
+            <label class="form__radio-label" for="query-general">
+              General Inquiry
+            </label>
+          </div>
+          <div class="form__query">
+            <input
+              class="form__radio-input"
+              type="radio"
+              id="query-support"
+              name="query-type"
+              value="support"
+            />
+            <label class="form__radio-label" for="query-support">
+              Support Request
+            </label>
+          </div>
+          <span class="form__error" aria-live="polite">
+            Please select a query type
+          </span>
+        </fieldset>
+        <!-- Message -->
+        <div class="form__message">
+          <label class="form__label" for="message">
+            Message <span class="form__required name-important">*</span>
+          </label>
+          <textarea
+            class="form__textarea"
+            id="message"
+            name="message"
+            cols="30"
+            rows="10"
+            required
+            aria-describedby="message-error"
+            placeholder="How can we help?"
+          ></textarea>
+          <span id="message-error" class="form__error" aria-live="polite">
+            This field is required
+          </span>
+        </div>
+        <!-- Consent -->
+        <div class="form__consent">
+          <div class="form__consent-wrapper">
+            <input
+              class="form__checkbox"
+              type="checkbox"
+              id="consent"
+              name="consent"
+              required
+            />
+            <label class="form__checkbox-label" for="consent">
+              I consent to being contacted by the team
+              <span class="form__required name-important">*</span>
+            </label>
+          </div>
+
+          <span class="form__error" aria-live="polite">
+            Please provide consent to proceed
+          </span>
+        </div>
+        <!-- Submit -->
+        <button class="form__submit" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
