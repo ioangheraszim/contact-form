@@ -105,6 +105,7 @@ h6 {
   background-color: var(--white);
   border-radius: 1rem;
   padding: 1rem 1.5rem;
+  position: relative;
 }
 
 .title {
@@ -214,6 +215,14 @@ h6 {
   border: 1px solid var(--red);
 }
 
+.form__error {
+  display: none;
+}
+
+.form__error.is-visible {
+  display: block;
+}
+
 /* Form Message */
 .form__message {
   margin: 0.35rem 0;
@@ -272,6 +281,37 @@ h6 {
 
 .form__submit:focus-visible {
   border: 2px solid var(--grey-900);
+}
+
+/* Success message */
+
+.success {
+  background-color: var(--green-600);
+  color: var(--green-200);
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 350px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.success.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.success__title {
+  display: flex;
+}
+
+.success__message {
+  padding: 0 1rem;
 }
 
 @media (min-width: 768px) {
@@ -333,5 +373,13 @@ h6 {
     display: flex;
     align-items: start;
     flex-direction: column;
+  }
+
+  .success {
+    position: absolute;
+    top: -14%;
+    left: 50%;
+    width: auto;
+    transform: translate(-50%, 0);
   }
 }
