@@ -76,6 +76,7 @@
           <legend class="form__legend">
             Query Type <span class="form__required name-important">*</span>
           </legend>
+          <div></div>
           <div class="form__query">
             <input
               class="form__radio-input"
@@ -101,10 +102,10 @@
               Support Request
             </label>
           </div>
-          <span class="form__error" aria-live="polite">
-            Please select a query type
-          </span>
         </fieldset>
+        <span class="form__error" aria-live="polite">
+          Please select a query type
+        </span>
         <!-- Message -->
         <div class="form__message">
           <label class="form__label" for="message">
@@ -114,8 +115,8 @@
             class="form__textarea"
             id="message"
             name="message"
-            cols="30"
-            rows="10"
+            cols="5"
+            rows="4"
             required
             aria-describedby="message-error"
             placeholder="How can we help?"
@@ -139,9 +140,8 @@
               <span class="form__required name-important">*</span>
             </label>
           </div>
-
           <span class="form__error" aria-live="polite">
-            Please provide consent to proceed
+            To submit this form, please consent to being contacted
           </span>
         </div>
         <!-- Submit -->
